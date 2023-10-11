@@ -1,0 +1,80 @@
+.nav {
+    display: block;
+    justify-content: center;
+    height: 50px;
+    border-radius: 0px;
+}
+
+.navbar {
+    background-color: white;
+    justify-content: left;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    padding: 4px 10px;
+    align-items: center;
+    height: 10px;
+    border-radius: 0px;
+}
+
+.navbar__complete {
+    display: flex;
+    flex-direction: row;
+    float: right;
+    word-spacing: 5px;
+    overflow: hidden;
+    text-align: center;
+    margin: 5px 0px 0px 5px;
+    overflow: hidden;
+    justify-content: space-between;
+
+}
+
+.navbar_hamburger {
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+    padding-right: 5px;
+}
+
+.navbar_hamburger>p {
+    text-align: center;
+    justify-content: center;
+    margin: 0px;
+    font-size: 1.5vh;
+    font-weight: bold;
+    padding-top: 2px;
+    padding-left: 7px;
+}
+
+.navbar_hamburger>button>span {
+    padding: 0px;
+    font-size: 13px;
+}
+
+.navbar_hamburger>button {
+    padding: 0px;
+    height: 10px;
+}
+
+.navbar__complete>ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style-type: none;
+    padding-left: 15px;
+}
+
+.navbar__complete>ul>li>a {
+    text-decoration: none;
+    color: #FFF;
+    font-size: 1.4vh;
+    padding: 0px;
+    float: left;
+
+}
+
+.navbar-brand {
+    word-spacing: normal;
+
+}

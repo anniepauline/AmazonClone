@@ -8,7 +8,6 @@ function Home() {
         <div className="home" id="top">
             <div className="home__container">
                 <Slider />
-
             </div>
             <div className="home__data">
                 <div className="home__row">
@@ -56,6 +55,44 @@ function Home() {
                         price={"10948.98"}
                         image={"https://images-na.ssl-images-amazon.com/images/I/6125mFrzr6L._AC_SX355_.jpg"}
                         rating={4} />
+                </div>
+                {/* ------------------------------------------------- */}
+                <div className="home__row">
+                    <Product
+                        id="32543543495"
+                        title={"Amazon Brand - Solimo Strive Office Chair with Chrome Base, Mesh Back, 3D Arms, 2-D Lumbar Support, 3-Lock Synchro Mechanism (Black)"}
+                        price={"17.9"}
+                        image={"https://m.media-amazon.com/images/I/912uPOU6m5L._AC_UL320_.jpg"}
+                        rating={4} />
+                    <Product
+                        id="908293321"
+                        title={"Logitech B170 Wireless Mouse, 2.4 GHz with USB Nano Receiver, Optical Tracking, 12-Months Battery Life, Ambidextrous, PC/Mac/Laptop - Black"}
+                        price={"449.0"}
+                        image={"https://m.media-amazon.com/images/I/516LU0H963L._AC_UL320_.jpg"}
+                        rating={5} />
+
+                </div>
+                <div className="home__row">
+                    <Product
+                        id={"123213491"}
+                        title={"Logitech Pebble Keys 2 K380s, Slim and Portable, Easy-Switch for Windows, macOS, iPadOS, Android, Chrome OS - Tonal Rose"}
+                        price={"2199.9"}
+                        image={"https://m.media-amazon.com/images/I/61vnuYiLrXL._SL1500_.jpg"}
+                        rating={4} />
+
+                    <Product
+                        id="495380945"
+                        title={"TP-Link Tapo 360° 2MP 1080p Full HD Pan/Tilt Home Security Wi-Fi Smart Camera| Alexa Enabled"}
+                        price={"1998.9"}
+                        image={"https://m.media-amazon.com/images/I/41KuE9NipqL._SL1000_.jpg"}
+                        rating={4} />
+
+                    <Product
+                        id="490385044"
+                        title={"Tygot Gorilla Tripod/Mini 33 CM (13 Inch) Tripod for Mobile Phone with Phone Mount "}
+                        price={"259.99"}
+                        image={"https://m.media-amazon.com/images/I/51I+SdOM9NL._SL1500_.jpg"}
+                        rating={3} />
                 </div>
             </div>
 
