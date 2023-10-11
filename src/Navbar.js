@@ -1,60 +1,72 @@
-import React from "react";
+import { React, useState } from "react";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+import SideNav from "./SideNav";
 import "./Navbar.css";
-
-
 
 // All nav items list array
 const navItemList = [
-    { id: 0, title: "Fresh", hrefLink: "#" },
-    { id: 1, title: "Amazon Pay", hrefLink: "#" },
-    { id: 2, title: "Gift Cards", hrefLink: "#" },
+    { id: 0, title: "Amazon miniTV", hrefLink: "#" },
+    { id: 1, title: "Sell", hrefLink: "#" },
+    { id: 2, title: "Best Sellers", hrefLink: "#" },
     { id: 3, title: "Today's Deals", hrefLink: "#" },
-    { id: 4, title: "Sell", hrefLink: "#" },
-    { id: 5, title: "Gift Ideas", hrefLink: "#" },
-    { id: 6, title: "Buy Again", hrefLink: "#" },
-    { id: 7, title: "Health, Household & Personal Care", hrefLink: "#" },
-    { id: 8, title: "Baby", hrefLink: "#" },
-    { id: 9, title: "Toys & Games", hrefLink: "#" },
-    { id: 10, title: "Home Improvement", hrefLink: "#" },
-    { id: 11, title: "Browsing History", hrefLink: "#" },
-    { id: 12, title: "Coupons", hrefLink: "#" },
+    { id: 4, title: "Mobiles", hrefLink: "#" },
+    { id: 5, title: " Customer Service", hrefLink: "#" },
+    { id: 6, title: "Prime", hrefLink: "#" },
+    { id: 7, title: "New Releases", hrefLink: "#" },
+    { id: 8, title: "Electronics", hrefLink: "#" },
+    { id: 9, title: "Gift Ideas", hrefLink: "#" },
+    { id: 10, title: "Fashion ", hrefLink: "#" },
+    { id: 11, title: "Home&Kitchen ", hrefLink: "#" },
+    { id: 12, title: "Computers", hrefLink: "#" },
+    { id: 14, title: "Amazon Pay ", hrefLink: "#" },
+    { id: 15, title: "Books ", hrefLink: "#" },
+    { id: 14, title: "Coupons  ", hrefLink: "#" },
+    { id: 14, title: "Toys&Games  ", hrefLink: "#" },
+    { id: 14, title: "Home Improvement  ", hrefLink: "#" },
 ];
 function Navbar() {
+    const [sideNavVisibility, toggleSideNavVisibility] = useState(false);
+
     return (
-        <div>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#">Navbar</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Features</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Pricing</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Dropdown link
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                </ul>
-                            </li>
-                        </ul>
+        <div className="nav " >
+            <nav
+                className="navbar navbar-black "
+                style={{ backgroundColor: "#222f3e" }}
+            >
+                <div className="navbar__complete nav__item ">
+
+                    <div class="pos-f-t " className="navbar_hamburger">
+                        <button class="navbar-toggler navbar-dark" style={{ backgroundColor: "#222f3e" }}
+                            type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent"
+                            aria-controls="navbarToggleExternalContent" aria-expanded="false"
+                            aria-label="Toggle navigation"
+                            onClick={(_) => {
+                                toggleSideNavVisibility(true);
+                            }}>
+
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <p style={{ color: "white", weight: "bold" }}>All</p>
                     </div>
+                    <ul>
+                        {navItemList?.map((navItem) => (
+                            <li><a
+                                className="navbar-brand white-text"
+                                key={navItem.id}
+                                href={navItem.hrefLink}
+                            >
+                                {navItem.title}
+                                {navItem.title === "Browsing History" && <ArrowDropDownIcon />}
+                            </a></li>
+                        ))}
+                    </ul>
                 </div>
-            </nav>
-        </div>
+            </nav >
+            {sideNavVisibility && (
+                <SideNav toggleVisibility={toggleSideNavVisibility} />
+            )
+            }
+        </div >
     );
 }
 export default Navbar;

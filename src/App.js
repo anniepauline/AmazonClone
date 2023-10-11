@@ -5,6 +5,7 @@ import Checkout from "./Checkout";
 import Login from "./Login";
 import Payment from "./Payment";
 import Footer from "./Footer";
+import Navbar from './Navbar';
 import { React, useEffect } from "react"
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
@@ -62,12 +63,14 @@ function App() {
               <>
                 <Header />
                 <Elements stripe={promise}> <Payment /></Elements>
+                <Footer />
               </>
             )}>
           </Route>
           <Route path="/" element={(
             <>
               <Header />
+              <Navbar />
               <Home />
               <Footer />
             </>

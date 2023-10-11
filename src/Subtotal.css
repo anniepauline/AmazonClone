@@ -29,3 +29,33 @@
     border-color: #a88734 #9c7e31 #846a29;
     color: #111;
 }
+
+@media screen and (max-width: 789px) {
+
+    .subtotal {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 130px;
+        height: 70px;
+        padding: 5px;
+        background-color: #f3f3f3;
+        border: 1px solid #dddddd;
+        border-radius: 3px;
+        font-size: 1vh;
+        align-items: center;
+
+    }
+
+    .subtotal>button {
+        background: #f0c14b;
+        border-radius: 2px;
+        width: 80%;
+        height: 15px;
+        border: 1px solid;
+        margin-top: 5px;
+        border-color: #a88734 #9c7e31 #846a29;
+        color: #111;
+
+    }
+}

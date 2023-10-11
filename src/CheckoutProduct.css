@@ -33,3 +33,36 @@
 .checkoutProduct__rating {
     display: flex;
 }
+
+@media screen and (max-width: 789px) {
+    .checkoutProduct__title {
+        font-size: 1.4vh;
+        font-weight: 500;
+        width: 130px;
+    }
+
+    .checkoutProduct__image {
+        height: 100px;
+        width: 50px;
+        object-fit: contain;
+    }
+
+    .checkoutProduct__info>button {
+        background: #f0c14b;
+        border: solid;
+        border-color: #a88734 #9c7e31 #846a29;
+        color: #111;
+        font-size: 1.2vh;
+
+    }
+
+    .checkoutProduct {
+        display: flex;
+        flex-direction: row;
+        margin: 5px;
+        align-items: center;
+        text-align: left;
+    }
+
+
+}

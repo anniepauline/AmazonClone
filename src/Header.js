@@ -5,7 +5,6 @@ import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import { NavLink } from "react-router-dom";
 import { useStateValue } from "./StateProvider";
 import { auth } from "./FBase";
-import Navbar from "./Navbar";
 
 function Header() {
     const [{ basket, user }, dispatch] = useStateValue();
@@ -24,7 +23,9 @@ function Header() {
 
             <div className="header__search" >
                 <input className="header__searchInput" type="text" />
-                <SearchIcon className="header__searchIcon" />
+                <div className="header__searchIcon" >
+                    <SearchIcon className="header__icon" />
+                </div>
             </div>
 
             <div className="header__nav">
